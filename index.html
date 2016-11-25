@@ -1,0 +1,29 @@
+<!-- Bu Örnekte DOM ile Html nesnemize erişip görsel değiştirme işlemini yaptık.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resmi Değiştir - devcodec.com</title>
+    <script type="text/javascript">
+        /*Fonksiyon tanımlıyoruz.*/
+        function ImageChange() {
+            //1. yol
+            //var image = document.getElementById("image"); // id'si 'image' olan tagimize erişiyoruz ve bu tagimizi değişkene atıyoruz.
+            //image.src="images/ikinciResim.png";  // atadığımız değişken artık nesnemizdir yani img etiketini ve özelliklerini taşır burada src'sini yani dosya yolunu değiştiriyoruz.
+
+            //2. yol
+            document.getElementById("image").src="images/ikinciResim.png"; // Burada direk nesnemize erişip görselimizi değiştiriyoruz.
+
+
+            alert("İşlem Başarılı"); // İşlem bitince mesaj verdiriyoruz.
+        }
+    </script>
+</head>
+<body>
+<img src="images/ilkResim.png" id="image" alt="" title="" />
+<br/>
+
+<!-- butonumuza oluşturduğumuz fonksiyonu ekliyoruz. onclick attribute kullanıcı tarafından nesnemize tıklandığı zaman devreye giren etkileşimdir.   -->
+<input type="button" value="Resmi Değiştir" onclick="ImageChange();" />
+</body>
+</html>
